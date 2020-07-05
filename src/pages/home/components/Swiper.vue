@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-     <swiper ref="mySwiper" :options="swiperOptions">
+    <swiper ref="mySwiper" :options="swiperOptions">
         <swiper-slide v-for="item of swiperList" :key="item.id"> 
             <img class="swiper-img" :src="item.imgUrl">
         </swiper-slide>
@@ -16,8 +16,13 @@ export default {
         return {
             swiperOptions: {
                 pagination: '.swiper-pagination', 
-                // 显示轮播页面小点
-                loop: true //支持循环轮播
+                //显示轮播页面小点
+                loop: true ,
+                //支持循环轮播
+                // autoplay: 3000,
+                //自动播放间隔时间
+                // speed: 1000,
+                //滑动耗费时间
             },
             swiperList: [{
                 id: '0001',

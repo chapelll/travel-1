@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
+    "core-js": "^2.6.11",
     "fa": "^1.0.1",
     "fastclick": "^1.0.6",
     "swiper": "^5.4.5",
