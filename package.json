@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "better-scroll": "^1.15.2",
     "core-js": "^2.6.11",
     "fa": "^1.0.1",
     "fastclick": "^1.0.6",
