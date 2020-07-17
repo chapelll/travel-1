@@ -18,7 +18,7 @@
                </div>
            </div>
        </div>
-       <div class="area" v-for="(item,key) of cities" :key="key">
+       <div class="area" v-for="(item,key) of cities" :key="key" :ref="key">
             <div class="title border-topbottom">{{key}}</div>
             <div class="item-list">
                 <div class="item border-bottom"
@@ -38,10 +38,22 @@ export default {
     name: 'CityList',
     props: {
         hot: Array,
-        cities: Object
+        cities: Object,
+        letter: String
     },
     mounted () {
         this.scroll = new Bscroll(this.$refs.wrapper)
+    },
+    watch: {
+        letter () {
+            // letter代表指尖所触动或点击的字母元素，当letter改变的时候就让左边滚动到那个字母的地方
+            if (this.letter) {
+                let element = this.$refs[this.letter][0]
+                //element是letter代表字母所对应的左边那一块区域元素
+                this.scroll.scrollToElement(element)
+            // scroll插件提供的功能，能够滚动到目标元素这儿
+            }
+        }
     }
 }
 </script>
