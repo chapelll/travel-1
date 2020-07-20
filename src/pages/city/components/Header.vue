@@ -15,7 +15,6 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~@/assets/styles/varibles.styl'
-
     .header
         position relative
         overflow hidden
